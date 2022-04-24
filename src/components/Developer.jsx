@@ -69,7 +69,7 @@ export default function Developer () {
                         Nice, compact, and has very little boilerplate. Writing in Svelte feels great.
                     </Technology>
                     <Technology src={vue_logo} title="Vue" url="https://vuejs.org/">
-                        For several years I wrote Vue. It's very complete - like an older, more matured Svelte.
+                        For several years I wrote in Vue. It's very complete - like an older, more matured Svelte.
                     </Technology>
                 </ul>
             </div>
