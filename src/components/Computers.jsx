@@ -1,11 +1,19 @@
 import img from '../img/mkii-038-/1.png'
+
 import g1 from '../img/mkii-038-/2.png'
 import g2 from '../img/mkii-038-/3.png'
 import g3 from '../img/mkii-038-/4.png'
 import g4 from '../img/mkii-038-/5.png'
 
-export default function MKII () {
-    const gallery = [g1, g2, g4, g3].map(src => <img src={src} alt="" className='square'></img>)
+import o1 from '../img/switch-810/4.jpeg'
+import o2 from '../img/switch-810/3.jpeg'
+import o3 from '../img/switch-810/10.jpeg'
+import o4 from '../img/ft03_2.jpg'
+
+export default function Computers () {
+    const makeGallery = (array) => array.map(src => <img src={src} alt="" className='square'></img>)
+    const gallery = makeGallery([g1, g2, g4, g3])
+    const otherGallery = makeGallery([o4, o1, o2, o3])
 
     return (
       <>
@@ -43,10 +51,22 @@ export default function MKII () {
           </div>
         </div>
         <div className="container bg-dark-500 pad-y-0">
-          <div className='grid gap-0' size="span-2 xs-1">
+          <div className='grid gap-0'>
             {gallery}
           </div>
         </div>
-        <div className='container bg-dark pad-mt-0'></div>
+        <div className='container flow bg-dark pad-mb-0'>
+          <h3 className="pad-y border-mb border-light-900 text-light">Other computers</h3>
+          <main className='bg-dark-500 pad text-light'>
+            The <strong>- 038 -</strong> is my favorite, but I've built other computers too. Here are some more pictures.
+          </main>
+        </div>
+        <div className="container bg-dark pad-y-0">
+          <div className='grid gap-0'>
+            {otherGallery}
+          </div>
+          <div className='pad-mb bg-dark-500'>&nbsp;</div>
+        </div>
+        <div className='container flow bg-dark pad-mt-0'></div>
       </>
 )}
